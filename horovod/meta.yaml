@@ -1,0 +1,53 @@
+
+package:
+  name: horovod
+  version: "{{ GIT_DESCRIBE_TAG }}" 
+
+source:
+  git_url: https://github.com/horovod/horovod.git
+  git_tag: tags/v0.18.2
+
+build:
+  number: 0
+  script_env: MODULEPATH
+
+requirements:
+  host:
+    - pip
+    - python
+    - Cython
+    - cython
+  run:
+    - python
+    - cffi
+    - cloudpickle
+    - psutil
+    - pyyaml
+    - six
+    - tensorflow 1.14
+    - pytorch-cpu
+  build:
+    - python
+    - Cython
+    - cython
+    - cffi
+    - cloudpickle
+    - psutil
+    - pyyaml
+    - six
+    - tensorflow 1.14
+    - pytorch-cpu
+
+
+about:
+  home: "https://github.com/horovod/horovod"
+  license: Apache Software
+  license_family: Apache
+  license_file: 
+  summary: "Horovod is a distributed training framework for TensorFlow, Keras, PyTorch, and MXNet. The goal of Horovod is to make distributed Deep Learning fast and easy to use."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here

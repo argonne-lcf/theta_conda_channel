@@ -1,0 +1,60 @@
+
+
+package:
+  name: cython
+  version: "{{ GIT_DESCRIBE_TAG }}"
+
+source:
+  - git_url: https://github.com/cython/cython.git
+  - git_tag: tags/0.29.14
+
+build:
+  number: 0
+  entry_points:
+    - cython = Cython.Compiler.Main:setuptools_main
+    - cythonize = Cython.Build.Cythonize:main
+    - cygdb = Cython.Debugger.Cygdb:main
+  script_env: MODULEPATH
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+  build:
+    - python
+
+test:
+  imports:
+    - Cython
+    - Cython.Build
+    - Cython.Build.Tests
+    - Cython.Compiler
+    - Cython.Compiler.Tests
+    - Cython.Debugger
+    - Cython.Debugger.Tests
+    - Cython.Distutils
+    - Cython.Plex
+    - Cython.Runtime
+    - Cython.Tempita
+    - Cython.Tests
+    - Cython.Utility
+    - pyximport
+  commands:
+    - cython --help
+    - cythonize --help
+    - cygdb --help
+
+about:
+  home: "http://cython.org/"
+  license: Apache Software
+  license_family: APACHE
+  license_file: 
+  summary: "The Cython compiler for writing C extensions for the Python language."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here

@@ -1,0 +1,43 @@
+
+package:
+  name: mpi4py
+  version: "{{ GIT_DESCRIBE_TAG }}" 
+
+source:
+  git_url: https://github.com/mpi4py/mpi4py.git
+  git_tag: tags/3.0.3
+
+build:
+  number: 0
+  script_env: MODULEPATH
+
+requirements:
+  host:
+    - pip
+    - python
+    - Cython
+    - cython
+  run:
+    - python
+  build:
+    - python
+    - Cython
+    - cython
+
+#test:
+#  imports:
+#    - mpi4py
+#    - mpi4py.futures
+
+about:
+  home: "https://bitbucket.org/mpi4py/mpi4py/"
+  license: BSD
+  license_family: BSD
+  license_file: 
+  summary: "Python bindings for MPI"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
