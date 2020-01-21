@@ -19,6 +19,7 @@ eval "$(mconda3/bin/conda shell.bash hook)"
 You might need to install some things
 ```
 conda install anaconda-client
+conda install conda-build
 ```
 
 Clone this repository and enter repo directory
