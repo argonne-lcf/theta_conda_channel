@@ -11,23 +11,23 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh -b -p $(pwd -LP)/mconda3
 ```
 
-Enter the base environment
+Enter the base environment:
 ```
 eval "$(mconda3/bin/conda shell.bash hook)"
 ```
 
-You might need to install some things
+You might need to install some things:
 ```
 conda install anaconda-client
 conda install conda-build
 ```
 
-Clone this repository and enter repo directory
+Clone this repository and enter repo directory:
 ```
 conda-build cython/
 ```
 
-The build will give you the path to the `*.tar.bz2` package file. Now you nneed to upload it
+The build will give you the path to the `*.tar.bz2` package file, e.g. `mconda/conda-bld/linux-64/cython-0.29.14-py37_0.tar.bz2`. Now you need to upload it:
 ```
 anaconda upload --user argonne-lcf <path/to/tar.bz2>
 ```
