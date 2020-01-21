@@ -13,8 +13,9 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 
 Enter the base environment:
 ```
-eval "$(mconda3/bin/conda shell.bash hook)"
+eval "$(mconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
 ```
+where `YOUR_SHELL_NAME` is `bash`, `zsh`, `fish`, etc.
 
 You might need to install some things:
 ```
