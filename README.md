@@ -29,7 +29,7 @@ conda-build cython/
 
 The build will give you the path to the `*.tar.bz2` package file, e.g. `mconda/conda-bld/linux-64/cython-0.29.14-py37_0.tar.bz2`. Now you need to upload it:
 ```
-anaconda upload --user argonne-lcf <path/to/tar.bz2>
+anaconda upload --user alcf-theta <path/to/tar.bz2>
 ```
 
 At this point it will ask for your password for anaconda cloud. You'll need to be associated with the organization to upload to it.
