@@ -36,6 +36,6 @@ At this point it will ask for your password for anaconda cloud. You'll need to b
 
 ## Building a Python environment on Theta
 
-Simply run the script `conda_build_theta.sh <path/where/you/want/conda/installed>` and it will build an environment for machinne learning codes including a working version of Horovod and mpi4py. Activate the environment simply with `export PATH=<path/where/you/want/conda/installed>:$PATH`
+Simply run the script `conda_build_theta.sh <path/where/you/want/conda/installed>` and it will build an environment for machinne learning codes including a working version of Horovod and mpi4py. The target directory should not already exist; the Miniconda installer will fail even if the pre-existing target directory is empty. Activate the environment simply with `export PATH=<path/where/you/want/conda/installed>:$PATH`
 
 
