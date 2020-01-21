@@ -1,8 +1,8 @@
-# theta_conda_channel
+# `theta_conda_channel`
 Files for building anaconda cloud packages for Theta.
 Misha Salim and Taylor Childers.
 
-# Building a package
+## Building a package
 
 Install a fresh miniconda version:
 ```
@@ -13,7 +13,7 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 
 Enter the base environment
 ```
-eval "$(mcondna3/bin/conda shell.bash hook)"
+eval "$(mconda3/bin/conda shell.bash hook)"
 ```
 
 You might need to install some things
@@ -33,7 +33,7 @@ anaconda upload --user argonne-lcf <path/to/tar.bz2>
 
 At this point it will ask for your password for anaconda cloud. You'll need to be associated with the organization to upload to it.
 
-# Building a Python environment on Theta
+## Building a Python environment on Theta
 
 Simply run the script `conda_build_theta.sh <path/where/you/want/conda/installed>` and it will build an environment for machinne learning codes including a working version of Horovod and mpi4py. Activate the environment simply with `export PATH=<path/where/you/want/conda/installed>:$PATH`
 
