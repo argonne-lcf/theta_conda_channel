@@ -16,5 +16,5 @@ chmod a+x Miniconda3-latest-Linux-x86_64.sh
 export PATH=$1/bin:$PATH
 conda_exe=$1/bin/conda
 
-${conda_exe} install -y tensorflow=1.14 pytorch-cpu=1.2 mkl-dnn scipy pandas h5py virtualenv matplotlib scikit-learn
+${conda_exe} install -y tensorflow=1.14 pytorch mkl-dnn scipy pandas h5py virtualenv matplotlib scikit-learn
 ${conda_exe} install -y -c alcf-theta mpi4py horovod
