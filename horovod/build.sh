@@ -8,6 +8,8 @@ echo "In build.sh..."
 module load PrgEnv-gnu
 module load gcc/8.3.0
 module load cray-mpich
+#module load xalt
+#module load trackdeps
 
 module list
 
@@ -20,8 +22,8 @@ export CRAY_CPU_TARGET=mic-knl
 echo Editing setup.py...
 # mpi.cfg replacement
 sed -i "s/def get_mpi_flags():/def get_mpi_flags():\n    return ''/g" setup.py
-sed -i "s/require_list =/require_list=\[\] #/g" setup.py
-sed -i "s/setup(name=/require_list=\[\]\nsetup(name=/g" setup.py
+#sed -i "s/require_list =/require_list=\[\] #/g" setup.py
+#sed -i "s/setup(name=/require_list=\[\]\nsetup(name=/g" setup.py
 
 #grep -A 2 -B 2 get_mpi_flags setup.py
 #grep -A 2 -B 2 require_list setup.py

@@ -5,7 +5,7 @@ package:
 
 source:
   git_url: https://github.com/horovod/horovod.git
-  git_tag: tags/v0.18.2
+  git_tag: {{ horovod }}
 
 build:
   number: 0
@@ -24,8 +24,8 @@ requirements:
     - psutil
     - pyyaml
     - six
-    - tensorflow 1.14
-    - pytorch-cpu
+    - tensorflow {{ tensorflow }}
+    - pytorch {{ pytorch }} 
   build:
     - python
     - Cython
@@ -35,8 +35,8 @@ requirements:
     - psutil
     - pyyaml
     - six
-    - tensorflow 1.14
-    - pytorch-cpu
+    - tensorflow {{ tensorflow }}
+    - pytorch {{ pytorch }}
 
 
 about:
@@ -50,4 +50,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - your-github-id-here
+    - jtchilders

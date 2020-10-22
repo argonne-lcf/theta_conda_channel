@@ -1,0 +1,54 @@
+
+
+package:
+  name: pytorch
+  version: "{{ GIT_DESCRIBE_TAG }}"
+
+source:
+  - git_url: https://github.com/pytorch/pytorch.git
+  - git_rev: tags/v1.4.0a0
+
+build:
+  number: 0
+  script_env: MODULEPATH
+
+requirements:
+  run:
+    - pip
+    - numpy
+    - cmake
+    - typing
+    - setuptools
+    - pyyaml
+    - mkl >=2019.4,<2020.0a0
+    - mkl-service >=2,<3.0a0
+    - mkl-dnn
+    - ninja
+    - numpy >=1.11.3,<2.0a0
+    - python >=3.7,<3.8.0a0
+  build:
+    - pip
+    - numpy
+    - cmake
+    - typing
+    - setuptools
+    - pyyaml
+    - mkl >=2019.4,<2020.0a0
+    - mkl-service >=2,<3.0a0
+    - mkl-dnn
+    - ninja
+    - numpy >=1.11.3,<2.0a0
+    - python >=3.7,<3.8.0a0
+
+about:
+  home: "http://pytorch.org/"
+  license: Facebook
+  license_family: OTHER
+  license_file: 
+  summary: "PyTorch is a Python package that provides two high-level features: Tensor computation (like NumPy) with strong GPU acceleration and Tensor computation (like NumPy) with strong GPU acceleration."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
